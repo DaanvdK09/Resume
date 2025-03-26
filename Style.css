@@ -1,3 +1,4 @@
+/* General */
 body{
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,20 +51,25 @@ body.light-mode {
     color: #333333;
 }
 
-body.light-mode .sidebar, body.light-mode .navbar {
+body.light-mode .sidebar, body.light-mode .navbar, body.light-mode .dropdown-content {
     background-color: white;
 }
 
-body.light-mode .navbar, body.light-mode .footer {
+body.light-mode .navbar, body.light-mode .footer, body.light-mode .card {
     background-color: #ebebeb;
 }
 
-body.light-mode .sidebar a, body.light-mode .sidebar-icon c, body.light-mode .close-button, body.light-mode .navbar a, body.light-mode .sidebar, body.light-mode .footer a, body.light-mode .content img, body.light-mode .lighting-icon a {
+body.light-mode .upcoming-section, body.light-mode .news-section {
+    background-color: #ebebeb;
+    color: #333333;
+}
+
+body.light-mode .sidebar a, body.light-mode .sidebar-icon c, body.light-mode .close-button, body.light-mode .navbar a, body.light-mode .sidebar, body.light-mode .footer a, body.light-mode .content img, body.light-mode .lighting-icon a, body.light-mode .upcoming-section a, body.light-mode .news-section a, body.light-mode .section-label, body.light-mode .section-date, body.light-mode .card-content h2, body.light-mode .card-content p, body.light-mode .dropdown-content b {
     color: #333333;
     border-color: #333333;
 }
 
-body.light-mode .close-button:hover, body.light-mode .sidebar a:hover, body.light-mode .navbar a:hover, body.light-mode .footer a:hover {
+body.light-mode .close-button:hover, body.light-mode .sidebar a:hover, body.light-mode .navbar a:hover, body.light-mode .footer a:hover, body.light-mode .dropdown-content b:hover {
     color: grey;
 }
 
@@ -174,6 +180,32 @@ body.light-mode .lighting-icon a .fa-sun {
     color: grey;
 }
 
+.color-changer {
+    margin-top: -3.5%;
+    margin-right: 2%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.color-changer:hover {
+    transform: scale(1.33);
+}
+
+.color-changer a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.color-changer a:hover {
+    color: grey;
+}
+
 .nav-container {
     display: flex;
     justify-content: center;
@@ -216,6 +248,7 @@ body.light-mode .lighting-icon a .fa-sun {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    z-index: 1000;
 }
 
 .icon, .close-button, .sidebar-icon {
@@ -262,10 +295,6 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-right: 1rem;
 }
 
-.sidebar a:hover {
-    color: grey;
-}
-
 .sidebar.active {
     width: 250px;
     border-style: solid;
@@ -284,6 +313,10 @@ body.light-mode .lighting-icon a .fa-sun {
     text-align: left;
     width: 100%;
     margin-top: 1rem;
+}
+
+.sidebar .current-page a {
+    color: grey;
 }
 
 .sidebar c{
@@ -324,17 +357,55 @@ body.light-mode .lighting-icon a .fa-sun {
     color: grey;
 }
 
+.dropdown {
+    width: 100%;
+}
+
+.dropdown-link {
+    flex-grow: 1;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.dropdown-link:hover {
+    color: grey;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown-content {
+    margin-left: 5%;
+    display: block;
+    background-color: #333333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.dropdown-content b {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.dropdown-content b:hover {
+    color: grey;
+    transform: scale(1.15);
+}
+
 .header{
     margin-top: 7%;
     margin-left: 20%;
-    display: block;
-    padding: 2rem;
-    text-align: left;
-}
-
-.header2{
-    margin-top: 5%;
-    margin-left: 28%;
     display: block;
     padding: 2rem;
     text-align: left;
@@ -365,96 +436,6 @@ body.light-mode .lighting-icon a .fa-sun {
     font-size: 1.5rem; 
 }
 
-.img1{
-    margin-top: -23%;
-    margin-left: 60%;
-    width: 23%;
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-style: solid;
-    border-color: white;
-}
-
-.img2{
-    margin-top: -10%;
-    margin-left: 70%;
-    width: 15%;
-}
-
-.left{
-    font-size: 2.5rem;
-    margin: 2.5rem;
-    margin-left: 30%;
-    
-}
-
-.right{
-    font-size: 2.5rem;
-    margin: 2.5rem;
-    margin-left: 60%;
-}
-
-.upcoming-header, .news-header {
-    margin-top: 2rem;
-}
-
-.upcoming-section, .news-section {
-    margin-top: 4rem;
-}
-
-.upcoming-section img, .news-section img {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    margin-left: -2%;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    background-color: #494949;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card-content {
-    padding: 1rem;
-}
-
-.card-content h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.card-content p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-.upcoming, .news {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    padding: 2rem;
-    margin-top: -2rem;
-}
-
-.upcoming-section, .news-section {
-    flex: 1 1 calc(28% - 2rem);
-    box-sizing: border-box;
-}
-
 .footer{
     background-color: #494949;
     color: white;
@@ -473,4 +454,185 @@ body.light-mode .lighting-icon a .fa-sun {
 
 .footer a:hover{
     color: gray;
+    transform: scale(1.33);
+}
+
+/* Home */
+.img1{
+    margin-top: -23%;
+    margin-left: 60%;
+    width: 23%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: white;
+}
+
+.most-upcoming-section {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.most-upcoming-section .card {
+    margin-left: 25%;
+    transition: transform 0.3s;
+    width: 50%;
+}
+
+.most-upcoming-section .card:hover {
+    transform: scale(1.05);
+}
+
+.most-upcoming-section .card-content h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.most-upcoming-section .card-content p {
+    font-size: 1.5rem;
+    color: #ddd;
+}
+
+.countdown {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.upcoming-header, .news-header {
+    font-size: 4rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+.upcoming-section, .news-section {
+    margin-top: 1rem;
+}
+
+.upcoming-section img, .news-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+.section-label {
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-date {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-left: 3%;
+    display: inline-block;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #494949;
+    overflow: hidden;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    margin-left: -5%;
+    margin-top: 0%;
+    width: 110%;
+}
+
+.card-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.card-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.upcoming, .news {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: -2rem;
+    height: 100%;
+}
+
+.upcoming-section, .news-section {
+    flex: 1 1 calc(28% - 2rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-section a, .upcoming-section a, .most-upcoming-section a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Resume */
+.header2{
+    margin-top: 5%;
+    margin-left: 28%;
+    display: block;
+    padding: 2rem;
+    text-align: left;
+}
+
+.img2{
+    margin-top: -30%;
+    margin-left: 70%;
+    width: 20%;
+}
+
+.resume-content{
+    font-size: 2rem;
+    margin: 2.5rem;
+    margin-left: 20%;
+    
+}
+
+.right{
+    font-size: 2.5rem;
+    margin: 2.5rem;
+    margin-left: 60%;
+}
+
+.gold-medal {
+    color: gold;
+}
+.silver-medal {
+    color: silver;
+}
+
+.achievements-list {
+    list-style-type: none;
+}
+.achievements-list li {
+    margin-bottom: 2%;
 }

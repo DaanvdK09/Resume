@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <link href="../Style.css" rel="stylesheet" type="text/CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +21,16 @@
                 </div>
             </div>
             <div class="git-icon">
-                <a href="https://github.com/DaanvdK09" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/DaanvdK09/Resume" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="color-changer">
+                <a target="_blank"><i class="fas fa-paint-brush"></i></a> <!--can also use fa-adjust or fa-tint-->
             </div>
             <div class="lighting-icon" id="lighting-toggle">
                 <a href="#">
                     <i class="fas fa-moon" id="mode-icon"></i>
                     <i class="fas fa-sun" id="mode-icon"></i>
-                </a>
+                </a> 
             </div>
         </div>
     </div>
@@ -36,31 +40,84 @@
         <div class="sidebar-icon" id="sidebar-icon">
             <c>&lt;\&gt;</c>
         </div>
-        <a href="Home.html"><i class="fas fa-home"></i>Home</a>
+        <a><i class="fas fa-home"></i>Home</a>
         <div class="current-page">
-            <b><i class="fas fa-file-alt"></i>Resume</b>
+            <div class="dropdown">
+                <a class="current-page">
+                    <i class="fas fa-file-alt"></i>Resume
+                </a>
+                <div class="dropdown-content">
+                    <b href="Resume.html#personality"><i class="fas fa-user"></i>Personality</b> <!--fa-addres-book-->
+                    <b href="Resume.html#portfolio"><i class="fas fa-folder"></i>Portfolio</b> <!--fa-briefcase-->
+                    <b href="Resume.html#work-experience"><i class="fas fa-suitcase"></i>Work Experience</b> <!--fa-building-->
+                    <b href="Resume.html#skill's"><i class="fas fa-cogs"></i>Skill's</b> <!--fa-lightbulb-o-->
+                    <b href="Resume.html#education"><i class="fas fa-graduation-cap"></i>Education and Diplomas</b> <!--fa-certificate-->
+                    <b href="Resume.html#achievements"><i class="fas fa-trophy"></i>Achievements</b> <!--fa-star-->
+                </div>
+            </div>
         </div>
-        <a href="About.html"><i class="fas fa-user"></i>About Me</a>
-        <a href="Contact.html"><i class="fas fa-envelope"></i>Contact</a>
+        <a><i class="fas fa-user"></i>About Me</a>
+        <a><i class="fas fa-envelope"></i>Contact</a>
     </div>
 
     <div class="content">
         <div class="header2">
             <h1>Resume</h1>
         </div>
+        <div class="resume-content">
+            <h2 id="personal">Personality</h2>
+            <p>wie ben je</p>
+            <p>waarin ben je goed</p>
+            <p>Waar ben je trots op</p>
+            <p>je bijzondere Prestaties</p>
+            <p>Waar ben je naar op zoek</p>
+            <p>wat is je doel</p>
 
-        <h2 class="left">Personalia</h2>
+            <img class="img2" src="../Images/IMG-20241008-WA0000.jpg">
 
-        <img class="img2" src="../Images/IMG-20241008-WA0000.jpg">
+            <h2 id="portfolio">Portfolio</h2>
 
-        <h2 class="right">Portfolio</h2>
+            <h2 id="work-experience">Work Experience</h2>
+            <h3>Assistent Tennis Coach</h3>
+            <p>Tennisschool Netwerk, T.V. Cromwijck Woerden, 26-10-2023 to 04-07-2024</p>
+            <p>Wat heb je gedaan</p>
+            <ul>
+                <li><p>Belangrijkste taken</p></li>
+            </ul>
 
-        <h2 class="left">Werkervaring</h2>
+            <h2 id="skill's">Skill's</h2>
 
-        <h2 class="right">Vaardigheden</h2>
+            <h2 id="education">Education and Diplomas</h2>
+            <h3>Behaalde opleidingen</h3>
+            <p>naam opleidingsinstituut</p>
+            <p>jaar-jaar</p>
 
-        <h2 class="left">Opleidingen en Diploma's</h2>
-
+            <h2 id="achievements">Achievements</h2>
+            <h3>2024</h3>
+            <ul class="achievements-list">
+                <li><i class="fas fa-medal silver-medal"></i>Cromwijck Kids Open Youthtournament</li>
+                <li><i class="fas fa-medal silver-medal"></i>Kapsalon van Doorn Open Youthtournament Rijnhuyse 2024</li>
+            </ul>
+            <h3>2023</h3>
+            <ul class="achievements-list">
+                <li><i class="fas fa-medal gold-medal"></i>Open Dolle Domstad Dagen Youth</li>
+                <li><i class="fas fa-medal silver-medal"></i>IJTC | Play One Dag</li>
+                <li><i class="fas fa-medal silver-medal"></i>OYT Stad Woerden</li>
+                <li><i class="fas fa-medal gold-medal"></i>Open Botesa Youth Weekend 2023</li>
+                <li><i class="fas fa-medal silver-medal"></i>Wimbledon Kids Zeist</li>
+                <li><i class="fas fa-medal gold-medal"></i>4th Poldertournament Kamerik</li>
+            </ul>
+            <h3>2022</h3>
+            <ul class="achievements-list">
+                <li><i class="fas fa-medal silver-medal"></i>US Open Kids Waddinxveen</li>
+                <li><i class="fas fa-medal gold-medal"></i>Roland Garros & Padel Tour For Kids Maarn</li>
+                <li><i class="fas fa-medal silver-medal"></i>3rd Poldertournament Kamerik</li>
+            </ul>
+            <h3>2021</h3>
+            <ul class="achievements-list">
+                <li><i></i>The Goudse Stroopwafeltournament 2021(First Tournament)</li>
+            </ul>
+        </div>
     </div>
 
     <div class="footer">
