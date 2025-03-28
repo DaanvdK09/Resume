@@ -608,6 +608,7 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-top: -30%;
     margin-left: 70%;
     width: 20%;
+    display: block;
 }
 
 .resume-content{
@@ -623,6 +624,47 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-left: 60%;
 }
 
+/*Skils*/
+.skills-section {
+    margin-top: 2rem;
+}
+
+.skill-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #555;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-percentage {
+    height: 2rem;
+    background-color: #ff9800;
+    text-align: right;
+    padding-right: 0.5rem;
+    line-height: 2rem;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+
+/*Achievements*/
 .gold-medal {
     color: gold;
 }
@@ -635,4 +677,62 @@ body.light-mode .lighting-icon a .fa-sun {
 }
 .achievements-list li {
     margin-bottom: 2%;
+}
+
+/*About*/
+
+
+/*Contact*/
+.header3 {
+    margin-top: 2%;
+    margin-left: 15%;
+    display: block;
+    padding: 2rem;
+    text-align: left;
+}
+
+.contact-form {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #494949;
+    border-radius: 8px;
+    width: 40%;
+    margin-left: 15%;
+}
+
+.contact-form input {
+    width: 46.5%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333333;
+    color: white;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333333;
+    color: white;
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #666;
 }

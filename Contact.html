@@ -4,7 +4,7 @@
     <link href="../Style.css" rel="stylesheet" type="text/CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daan Van Der Kooij</title>
+    <title>Daan Van Der Kooij - Contact</title>
     <link rel="icon" width=100% href="../Images/Icon6.png" type="image/x-icon">
 </head>
 <body>
@@ -49,9 +49,16 @@
     </div>
 
     <div class="content">
-        <div class="header">
+        <div class="header3">
             <h1>Contact</h1>
-            <p>Placeholder</p>
+        </div>
+        <div class="contact-form">
+            <form id="contact-form">
+                <input type="text" id="name" name="name" rows="2" placeholder="Name" required>
+                <input type="email" id="email" name="email" rows="2" placeholder="Email" required>
+                <textarea id="message" name="message" rows="4" placeholder="Add your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
 
@@ -62,4 +69,5 @@
         <a href="https://steamcommunity.com/profiles/76561198995767680/" target="_blank"><i class="fab fa-steam"></i></a>
     </div>
     <script src="../Script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>     
 </body>
