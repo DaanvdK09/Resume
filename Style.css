@@ -1,11 +1,11 @@
 /* General */
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: white;
     background-color: #333333;
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
 }
 
 /* Dark Mode */
@@ -13,23 +13,19 @@ body{
     background-color: #333333;
     color: white;
 }
-  
+
 .dark-mode .sidebar, .dark-mode .navbar {
     background-color: #333333;
 }
-  
-.dark-mode .sidebar a, .dark-mode .sidebar-icon c, .dark-mode .close-button, .dark-mode .content img{
+
+.dark-mode .sidebar a, .dark-mode .sidebar-icon c, .dark-mode .close-button, .dark-mode .content img,
+.dark-mode .navbar, .dark-mode .footer, .dark-mode .navbar a, .dark-mode .footer a, .dark-mode .lighting-icon a, .dark-mode .news-section {
     color: white;
     border-color: white;
 }
 
 .dark-mode .navbar, .dark-mode .footer {
     background-color: #494949;
-}
-
-.dark-mode .sidebar a, .dark-mode .sidebar-icon c, .dark-mode .close-button, .dark-mode .navbar a, .dark-mode .sidebar, .dark-mode .footer a, .dark-mode .content img, .dark-mode .lighting-icon a, .dark-mode .news-section {
-    color: white;
-    border-color: white;
 }
 
 .dark-mode .close-button:hover, .dark-mode .sidebar a:hover, .dark-mode .navbar a:hover, .dark-mode .footer a:hover, .dark-mode .lighting-icon a:hover {
@@ -55,16 +51,12 @@ body.light-mode .sidebar, body.light-mode .navbar, body.light-mode .dropdown-con
     background-color: white;
 }
 
-body.light-mode .navbar, body.light-mode .footer, body.light-mode .card {
-    background-color: #ebebeb;
-}
-
-body.light-mode .upcoming-section, body.light-mode .news-section {
+body.light-mode .navbar, body.light-mode .footer, body.light-mode .card, body.light-mode .upcoming-section, body.light-mode .news-section {
     background-color: #ebebeb;
     color: #333333;
 }
 
-body.light-mode .sidebar a, body.light-mode .sidebar-icon c, body.light-mode .close-button, body.light-mode .navbar a, body.light-mode .sidebar, body.light-mode .footer a, body.light-mode .content img, body.light-mode .lighting-icon a, body.light-mode .upcoming-section a, body.light-mode .news-section a, body.light-mode .section-label, body.light-mode .section-date, body.light-mode .card-content h2, body.light-mode .card-content p, body.light-mode .dropdown-content b {
+body.light-mode .sidebar a, body.light-mode .sidebar-icon c, body.light-mode .close-button, body.light-mode .navbar a, body.light-mode .footer a, body.light-mode .content img, body.light-mode .lighting-icon a, body.light-mode .upcoming-section a, body.light-mode .news-section a, body.light-mode .section-label, body.light-mode .section-date, body.light-mode .card-content h2, body.light-mode .card-content p, body.light-mode .dropdown-content b {
     color: #333333;
     border-color: #333333;
 }
@@ -82,8 +74,8 @@ body.light-mode .lighting-icon a .fa-sun {
     opacity: 1;
 }
 
-/* Rest of Code */
-.navbar{
+/* Navbar */
+.navbar {
     background-color: #494949;
     overflow: hidden;
     top: 0;
@@ -91,10 +83,11 @@ body.light-mode .lighting-icon a .fa-sun {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
-.icon{
+/* Icons */
+.icon, .lighting-icon, .git-icon, .color-changer {
     margin-left: 2%;
     font-weight: bold;
     font-size: 4rem;
@@ -104,121 +97,46 @@ body.light-mode .lighting-icon a .fa-sun {
     transition: transform 0.3s;
 }
 
-.icon:hover{
+.icon:hover, .lighting-icon:hover, .git-icon:hover, .color-changer:hover {
     transform: scale(1.33);
 }
 
-.icon a{
-    color: white;
-    text-decoration: none;
-}
-
-.icon:hover a{
-    color: grey;
-}
-
-.lighting-icon {
-    margin-top: -6%;
-    margin-right: 5%;
-    font-weight: bold;
-    font-size: 1.5rem;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-}
-
-.lighting-icon:hover {
-    transform: scale(1.33);
-}
-
-.lighting-icon a {
+.icon a, .lighting-icon a, .git-icon a, .color-changer a {
     color: white;
     text-decoration: none;
     position: relative;
     display: inline-block;
 }
 
-.lighting-icon a:hover {
+.icon a:hover, .lighting-icon a:hover, .git-icon a:hover, .color-changer a:hover {
     color: grey;
 }
 
-.lighting-icon a i {
+.lighting-icon a i, .git-icon a i, .color-changer a i {
     position: absolute;
     top: 0;
     left: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-.lighting-icon a .fa-sun {
+.lighting-icon a .fa-sun, .git-icon a .fa-sun, .color-changer a .fa-sun {
     opacity: 0;
 }
 
-.git-icon {
-    margin-top: -3.5%;
-    margin-right: 2%;
-    font-weight: bold;
-    font-size: 1.5rem;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-}
-
-.git-icon:hover {
-    transform: scale(1.33);
-}
-
-.git-icon a {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-}
-
-.git-icon a:hover {
-    color: grey;
-}
-
-.color-changer {
-    margin-top: -3.5%;
-    margin-right: 2%;
-    font-weight: bold;
-    font-size: 1.5rem;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-}
-
-.color-changer:hover {
-    transform: scale(1.33);
-}
-
-.color-changer a {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-}
-
-.color-changer a:hover {
-    color: grey;
-}
-
+/* Nav Links */
 .nav-container {
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-links a{
+.nav-links a {
     font-weight: bold;
     font-size: 2rem;
     color: white;
@@ -229,11 +147,12 @@ body.light-mode .lighting-icon a .fa-sun {
     transition: transform 0.3s;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     transform: scale(1.33);
     color: grey;
 }
 
+/* Sidebar */
 .sidebar {
     font-weight: bold;
     height: 100%;
@@ -262,7 +181,7 @@ body.light-mode .lighting-icon a .fa-sun {
 .icon {
     left: 25px;
     top: 10px;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
 .close-button {
@@ -291,7 +210,7 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-top: 1rem;
 }
 
-.sidebar a i{
+.sidebar a i {
     margin-right: 1rem;
 }
 
@@ -303,7 +222,7 @@ body.light-mode .lighting-icon a .fa-sun {
     border-top: 0rem;
 }
 
-.current-page b{
+.current-page b {
     color: grey;
     padding: 8px 16px;
     text-decoration: none;
@@ -319,7 +238,7 @@ body.light-mode .lighting-icon a .fa-sun {
     color: grey;
 }
 
-.sidebar c{
+.sidebar c {
     padding: 8px 16px;
     text-decoration: none;
     color: white;
@@ -330,33 +249,11 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-top: 0.5rem;
 }
 
-.current-page b i{
+.current-page b i {
     margin-right: 1rem;
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.close-button:hover {
-    color: grey;
-}
-
-.sidebar-icon {
-    top: 1rem;
-    left: 0;
-}
-
-.icon:hover, .close-button:hover, .sidebar-icon:hover {
-    color: grey;
-}
-
+/* Dropdown */
 .dropdown {
     width: 100%;
 }
@@ -403,7 +300,8 @@ body.light-mode .lighting-icon a .fa-sun {
     transform: scale(1.15);
 }
 
-.header{
+/* Header */
+.header {
     margin-top: 7%;
     margin-left: 20%;
     display: block;
@@ -411,32 +309,34 @@ body.light-mode .lighting-icon a .fa-sun {
     text-align: left;
 }
 
-.header h1{
+.header h1 {
     font-size: 4rem;
     margin: 0;
 }
 
-.header p{
+.header p {
     margin-top: 1rem;
     font-size: 1.5rem;
 }
 
-.content{
+/* Content */
+.content {
     color: white;
     padding: 1rem;
 }
 
-.content h1{
+.content h1 {
     font-size: 4rem;
     margin: 0;
 }
 
-.content p{
+.content p {
     margin-top: 1rem;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
-.footer{
+/* Footer */
+.footer {
     background-color: #494949;
     color: white;
     text-align: center;
@@ -445,20 +345,20 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-top: 2%;
 }
 
-.footer a{
+.footer a {
     color: white;
     margin: 0 2rem;
     text-decoration: none;
     font-size: 3rem;
 }
 
-.footer a:hover{
+.footer a:hover {
     color: gray;
     transform: scale(1.33);
 }
 
 /* Home */
-.img1{
+.img1 {
     margin-top: -23%;
     margin-left: 60%;
     width: 23%;
@@ -512,12 +412,12 @@ body.light-mode .lighting-icon a .fa-sun {
 }
 
 .upcoming-section, .news-section {
-    flex: 1; /* Allow the boxes to grow and shrink equally */
+    flex: 1;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 0; /* Ensure the boxes can shrink */
+    min-width: 0;
 }
 
 .upcoming-section img, .news-section img {
@@ -580,8 +480,8 @@ body.light-mode .lighting-icon a .fa-sun {
 
 .upcoming, .news {
     display: flex;
-    flex-wrap: nowrap; /* Ensure items don't wrap to the next line */
-    gap: 2rem; /* Space between the boxes */
+    flex-wrap: nowrap;
+    gap: 2rem;
     justify-content: center;
     padding: 2rem;
     margin-top: -2rem;
@@ -594,7 +494,7 @@ body.light-mode .lighting-icon a .fa-sun {
 }
 
 /* Resume */
-.header2{
+.header2 {
     margin-top: 5%;
     margin-left: 28%;
     display: block;
@@ -602,27 +502,26 @@ body.light-mode .lighting-icon a .fa-sun {
     text-align: left;
 }
 
-.img2{
+.img2 {
     margin-top: -30%;
     margin-left: 70%;
     width: 20%;
     display: block;
 }
 
-.resume-content{
+.resume-content {
     font-size: 2rem;
     margin: 2.5rem;
     margin-left: 20%;
-    
 }
 
-.right{
+.right {
     font-size: 2.5rem;
     margin: 2.5rem;
     margin-left: 60%;
 }
 
-/*Skils*/
+/* Skills */
 .skills-section {
     margin-top: 2rem;
 }
@@ -661,11 +560,11 @@ body.light-mode .lighting-icon a .fa-sun {
     border-radius: 4px;
 }
 
-
-/*Achievements*/
+/* Achievements */
 .gold-medal {
     color: gold;
 }
+
 .silver-medal {
     color: silver;
 }
@@ -673,14 +572,12 @@ body.light-mode .lighting-icon a .fa-sun {
 .achievements-list {
     list-style-type: none;
 }
+
 .achievements-list li {
     margin-bottom: 2%;
 }
 
-/*About*/
-
-
-/*Contact*/
+/* Contact */
 .header3 {
     margin-top: 2%;
     margin-left: 15%;
@@ -698,8 +595,8 @@ body.light-mode .lighting-icon a .fa-sun {
     margin-left: 15%;
 }
 
-.contact-form input {
-    width: 46.5%;
+.contact-form input, .contact-form textarea {
+    width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -711,13 +608,6 @@ body.light-mode .lighting-icon a .fa-sun {
 
 .contact-form textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #333333;
-    color: white;
 }
 
 .contact-form button {
