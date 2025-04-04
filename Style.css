@@ -579,15 +579,15 @@ body.light-mode .lighting-icon a .fa-sun {
     justify-content: center;
     padding: 2rem;
     margin-top: -2rem;
-    height: 100%;
 }
 
 .upcoming-section, .news-section {
-    flex: 1 1 calc(28% - 2rem);
+    flex: 1;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: calc(33% - 2rem);
 }
 
 .news-section a, .upcoming-section a, .most-upcoming-section a {
